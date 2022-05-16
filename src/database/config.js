@@ -3,10 +3,10 @@ var sql = require('mssql');
 
 // CONEXÃO DO SQL SERVER - AZURE (NUVEM)
 var sqlServerConfig = {
-    user: "grupo06-1cco",
-    password: "#Shopflux",
-    database: "shopflux",
-    server: "grupo6-1cco.database.windows.net",
+    user: "xxxxxxxx",
+    password: "xxxxxxx",
+    database: "xxxxxxx",
+    server: "xxxxxxxx",
     pool: {
         max: 10,
         min: 0,

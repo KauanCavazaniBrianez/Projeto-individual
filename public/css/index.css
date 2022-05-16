@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Barlow', "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+}
+
+.header {
+    background-color: #027306;
+    ;
+    padding: 15px;
+    border-bottom: 1px solid #000;
+}
+
+.header .container {
+    justify-content:space-between;
+}
+
+.logo {
+    display: flex;
+    width: 340px;
+    justify-content: space-evenly;
+}
+
+.logo .logoWS {
+    width: 80px;
+}
+
+.header a {
+    padding-bottom: 3px;
+    text-decoration: none;
+    color: white;
+}
+
+.header a:hover {
+    border-bottom: 3px solid white;
+}
+
+.agora {
+    padding-bottom: 3px;
+    font-weight: 800;
+    border-bottom: 3px solid white;
+}
+
+.navbar {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    color: white;
+}
+
+
+.titulo {
+    color: white;
+    width: fit-content;
+    font-weight: 400;
+}
+
+/* banner */
+
+.banner p {
+    color: #fff;
+    background-color: #181818;
+    border-radius: 60px;
+    width: 500px;
+    height: 245px;
+    opacity: 0.5;
+    font-size: 40px;
+    font-weight: 400;
+}
