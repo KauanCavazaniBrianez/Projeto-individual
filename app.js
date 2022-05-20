@@ -25,7 +25,7 @@ app.use("/avisos", avisosRouter);
 app.use("/medidas", medidasRouter)
 
 app.listen(PORTA, function () {
-    console.log(`Servidor da ShopFlux está rodando!\n 
+    console.log(`Servidor da WebSoccer está rodando!\n 
     Você está rodando sua aplicação em Ambiente de ${process.env.AMBIENTE_PROCESSO} \n
     Acesse o caminho a seguir para visualizar: http://localhost:${PORTA}`);
 });
