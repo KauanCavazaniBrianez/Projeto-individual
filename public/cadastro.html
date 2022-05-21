@@ -19,7 +19,7 @@
         </div>
 
         <div class="cardCadastro">
-            <div class="campos">
+            <div id="div_campos" class="campos">
                 <h3>Faça parte do nosso time!</h3>
                 <p>Nome</p>
                 <input id="nome_input" placeholder="nome completo">
@@ -32,6 +32,12 @@
                 <p><a href="login.html">Já tem uma conta?</a></p> 
                 <button onclick="cadastrar()">Cadastrar</button>
             </div>
+            <div id="div_aguardar" class="loading">
+                <div class="ball"></div>
+                <div class="ball"></div>
+                <div class="ball"></div>
+                <span>Carregando...</span>
+            </div>
         </div>
 
     </body>
@@ -40,7 +46,7 @@
 <script>
 
 function cadastrar() {
-        //aguardar();
+        aguardar();
 
         var nomeVar = nome_input.value;
         var emailVar = email_input.value;
@@ -50,7 +56,7 @@ function cadastrar() {
         if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmarSenhaVar == "") {
             alert("ERRO - Campos em branco!");
 
-            //finalizarAguardar();
+            finalizarAguardar();
             return false;
         }
         /*else {
@@ -62,8 +68,8 @@ function cadastrar() {
             /*
             cardErro.style.display = "block"
             mensagem_erro.innerHTML = "Ops, e-mail inválido! Verifique e tente novamente.";
-            finalizarAguardar();
             */
+            finalizarAguardar();
             return false;
         }
         /*else {
@@ -75,8 +81,8 @@ function cadastrar() {
             /*
             cardErro.style.display = "block"
             mensagem_erro.innerHTML = "A senha é muito pequena!";
-            finalizarAguardar();
             */
+            finalizarAguardar();
             return false;
         }
         /*else {
@@ -88,8 +94,8 @@ function cadastrar() {
             /*
             cardErro.style.display = "block"
             mensagem_erro.innerHTML = "A senha é muito pequena!";
-            finalizarAguardar();
             */
+            finalizarAguardar();
             return false;
         }
         /*else {
@@ -129,6 +135,8 @@ function cadastrar() {
             } else {
                 alert("Houve um erro ao tentar realizar o cadastro!");
                 //throw ("Houve um erro ao tentar realizar o cadastro!");
+                finalizarAguardar();
+                //limparFormulario();
             }
         }).catch(function (resposta) {
             console.log(`#ERRO: ${resposta}`);

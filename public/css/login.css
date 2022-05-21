@@ -33,3 +33,7 @@
     color: rgba(29, 88, 1, 1);
     margin-left: 34px;
 }
+
+.cardLogin .loading {
+    margin-top: 36%;
+}
