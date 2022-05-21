@@ -20,6 +20,10 @@ body {
     background-color: white;
 }
 
+p {
+    cursor: default;
+}
+
 a{
     text-decoration: none;
 }
@@ -169,6 +173,7 @@ a{
     font-size: 18px;
     color: #fff;
     font-weight: bold;
+    cursor: default;
 }
 
 .footerInfo ul {

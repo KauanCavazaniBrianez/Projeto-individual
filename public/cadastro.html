@@ -130,8 +130,8 @@ function cadastrar() {
                     window.location = "login.html";
                 }, "2000")
                 
-                limparFormulario();
-                finalizarAguardar();
+                //limparFormulario();
+                //finalizarAguardar();
             } else {
                 alert("Houve um erro ao tentar realizar o cadastro!");
                 //throw ("Houve um erro ao tentar realizar o cadastro!");
@@ -142,7 +142,7 @@ function cadastrar() {
             console.log(`#ERRO: ${resposta}`);
             finalizarAguardar();
         });
-
+        
         return false;
     }
 

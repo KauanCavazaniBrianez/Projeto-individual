@@ -7,6 +7,14 @@ body {
     display: flex;
 }
 
+p {
+    cursor: default;
+}
+
+h3 {
+    cursor: default;
+}
+
 .logoWS {
     width: 107px;
     padding-left: 43px;
@@ -81,6 +89,7 @@ input {
 }
 
 .campos button:hover {
+    transition: 1s;
     background-color: rgba(14, 54, 0, 1);
 }
 
