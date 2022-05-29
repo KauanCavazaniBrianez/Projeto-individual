@@ -6,27 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INICIO - WEBSOCCER</title>
 
-    <script src="./js/funcoes.js"></script>
+    <script src="../js/funcoes.js"></script>
 
     <link rel="icon" href="../assets/icon/logoWebSoccer.png">
     <link rel="stylesheet" href="./css/inicio.css">
 </head>
 
-    <body>
+    <body onload="validarSessao()">
 
         <div class="header">
             <div class="container">
-                <div class="voltar">
-                    <a href=""><img src="../assets/imgs/back.png" alt=""></a>
+                <div class="voltar" onclick="limparSessao()">
+                    <img src="../assets/imgs/back.png" alt="">
                 </div>
                 <div class="usuario">
                     <div class="fotoUsuario">
                         <img src="../assets/imgs/usuario.png" alt="">
                     </div>
-                    <span>Usuario</span>
+                    <span id="b_usuario">Usuario</span>
                 </div>
                 <div class="pontuacao">
-                    Pontuação: <span>0</span>
+                    Pontuação: <span id="b_pontuacao">0</span>
                 </div>
             </div>
         </div>

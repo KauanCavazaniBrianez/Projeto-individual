@@ -4,15 +4,19 @@ function validarSessao() {
 
     var email = sessionStorage.EMAIL_USUARIO;
     var nome = sessionStorage.NOME_USUARIO;
+    var pontuacao = sessionStorage.PONTUACAO_USUARIO;
 
-    var h1LoginUsuario = document.getElementById("h1_login_usuario");
+    var nomeUsuario = document.getElementById("b_usuario");
+    var pontosQuiz = document.getElementById("b_pontuacao");
 
-    if (email != null && nome != null) {
+    if (email != null && nome != null && pontosQuiz != null) {
         // window.alert(`Seja bem-vindo, ${nome}!`);
-        if (h1LoginUsuario != undefined) {
-            h1LoginUsuario.innerHTML = email;
+        if (nomeUsuario != undefined) {
+            b_usuario.innerHTML = nome;
         }
-        b_usuario.innerHTML = nome;
+        if (pontosQuiz != undefined) {
+            b_pontuacao.innerHTML = pontuacao;
+        }
 
         // finalizarAguardar();
     } else {
