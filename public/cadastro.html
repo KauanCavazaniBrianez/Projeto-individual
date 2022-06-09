@@ -52,6 +52,9 @@ function cadastrar() {
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
         var confirmarSenhaVar = confirmarSenha_input.value;
+        var pontuacaoVar = 0;
+        var qtdAcertosVar = 0;
+        var qtdErrosVar = 0;
 
         if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmarSenhaVar == "") {
             alert("ERRO - Campos em branco!");
@@ -113,6 +116,9 @@ function cadastrar() {
                 nomeServer: nomeVar,
                 emailServer: emailVar,
                 senhaServer: senhaVar,
+                pontuacaoServer: pontuacaoVar,
+                qtdAcertosServer: qtdAcertosVar,
+                qtdErrosServer: qtdErrosVar
             })
         }).then(function (resposta) {
 
@@ -120,11 +126,6 @@ function cadastrar() {
 
             if (resposta.ok) {
                 alert("Cadastro realizado com sucesso! Redirecionando para tela de Login...");
-                /*
-                cardErro.style.display = "block";
-
-                mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
-                */
 
                 setTimeout(() => {
                     window.location = "login.html";

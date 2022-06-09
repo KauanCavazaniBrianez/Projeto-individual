@@ -117,6 +117,8 @@ function entrar() {
                     sessionStorage.NOME_USUARIO = json.nome;
                     sessionStorage.ID_USUARIO = json.id;
                     sessionStorage.PONTUACAO_USUARIO = json.pontuacao;
+                    sessionStorage.QTDACERTOS_USUARIO = json.qtdAcertos;
+                    sessionStorage.QTDERROS_USUARIO = json.qtdErros;
 
                     setTimeout(function () {
                         window.location = "./blog/inicio.html";

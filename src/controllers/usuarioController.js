@@ -65,6 +65,9 @@ function cadastrar(req, res) {
     var nome = req.body.nomeServer;
     var email = req.body.emailServer;
     var senha = req.body.senhaServer;
+    var pontuacao = req.body.pontuacaoServer;
+    var qtdAcertos = req.body.qtdAcertosServer;
+    var qtdErros = req.body.qtdErrosServer;
 
     // Faça as validações dos valores
     if (nome == undefined) {
@@ -76,7 +79,7 @@ function cadastrar(req, res) {
     } else {
         
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        usuarioModel.cadastrar(nome, email, senha)
+        usuarioModel.cadastrar(nome, email, senha, pontuacao, qtdAcertos, qtdErros)
             .then(
                 function (resultado) {
                     res.json(resultado);
@@ -94,9 +97,34 @@ function cadastrar(req, res) {
     }
 }
 
+function savePontos(req, res) {
+    var pontuacao = req.body.pontuacaoServer;
+    var qtdAcertos = req.body.qtdAcertosServer;
+    var qtdErros = req.body.qtdErrosServer;
+    var idUsuario = req.body.idUsuarioServer;
+
+    if (pontuacao == undefined) {
+        res.status(400).send("Sua pontuação está undefined!");
+    } else if (qtdAcertos == undefined) {
+        res.status(400).send("Sua quantidade de acertos está undefined!");
+    } else if (qtdErros == undefined) {
+        res.status(400).send("Sua quantidade de erros está undefined!");
+    } else {
+        
+        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+        usuarioModel.savePontos(pontuacao, qtdAcertos, qtdErros, idUsuario)
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            )
+    }
+}
+
 module.exports = {
     entrar,
     cadastrar,
+    savePontos,
     listar,
     testar
 }
