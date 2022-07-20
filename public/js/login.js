@@ -34,8 +34,7 @@ function entrar() {
 
             resposta.text().then(texto => {
                 console.error(texto);
-                // limparFormulario();
-                finalizarAguardar(texto);
+                finalizarAguardar();
             });
         }
 

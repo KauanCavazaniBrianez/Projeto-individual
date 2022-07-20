@@ -62,48 +62,24 @@ function cadastrar() {
             finalizarAguardar();
             return false;
         }
-        /*else {
-            setInterval(sumirMensagem, 5000)
-        }*/
 
         if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1) {
             alert("Ops, e-mail inválido! Verifique e tente novamente.");
-            /*
-            cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "Ops, e-mail inválido! Verifique e tente novamente.";
-            */
             finalizarAguardar();
             return false;
         }
-        /*else {
-            setInterval(sumirMensagem, 5000)
-        }*/
 
         if (senhaVar != confirmarSenhaVar) {
             alert("Ops, as senhas tem que ser iguais! Verifique e tente novamente.");
-            /*
-            cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "A senha é muito pequena!";
-            */
             finalizarAguardar();
             return false;
         }
-        /*else {
-            setInterval(sumirMensagem, 5000)
-        }*/
 
         if (senhaVar.length < 5) {
             alert("Ops, a senha é muito pequena! Tente novamente.");
-            /*
-            cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "A senha é muito pequena!";
-            */
             finalizarAguardar();
             return false;
         }
-        /*else {
-            setInterval(sumirMensagem, 5000)
-        }*/
 
         fetch("/usuarios/cadastrar", {
             method: "POST",
@@ -111,8 +87,6 @@ function cadastrar() {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                // crie um atributo que recebe o valor recuperado aqui
-                // Agora vá para o arquivo routes/usuario.js
                 nomeServer: nomeVar,
                 emailServer: emailVar,
                 senhaServer: senhaVar,
@@ -131,13 +105,9 @@ function cadastrar() {
                     window.location = "login.html";
                 }, "2000")
                 
-                //limparFormulario();
-                //finalizarAguardar();
             } else {
                 alert("Houve um erro ao tentar realizar o cadastro!");
-                //throw ("Houve um erro ao tentar realizar o cadastro!");
                 finalizarAguardar();
-                //limparFormulario();
             }
         }).catch(function (resposta) {
             console.log(`#ERRO: ${resposta}`);
@@ -146,11 +116,5 @@ function cadastrar() {
         
         return false;
     }
-
-    /*
-    function sumirMensagem() {
-        cardErro.style.display = "none"
-    }
-    */
 
 </script>

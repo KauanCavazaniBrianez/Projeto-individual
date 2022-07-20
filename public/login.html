@@ -50,46 +50,21 @@ function entrar() {
 
         if (emailVar == "" || senhaVar == "") {
             alert("Preencha todos os campos para prosseguir!");
-            /*
-            cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Preencha todos os campos para prosseguir!)";
-            */
             finalizarAguardar();
             return false;
         }
-        /*
-        else {
-            setInterval(sumirMensagem, 5000)
-        }
-        */
 
         if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1) {
             alert("Ops, e-mail inválido! Verifique e tente novamente.");
-            /*
-            cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "Ops, e-mail inválido! Verifique e tente novamente.";
-            */
             finalizarAguardar();
             return false;
         }
-        /*
-        else {
-            setInterval(sumirMensagem, 5000)
-        }
-        */
 
         if (senhaVar.length < 5) {
             alert("Ops, a senha é muito pequena! Verifique e tente novamente.");
-            /*
-            cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "A senha é muito pequena!";
-            */
             finalizarAguardar();
             return false;
         }
-        /*else {
-            setInterval(sumirMensagem, 5000)
-        }*/
 
         console.log("FORM LOGIN: ", emailVar);
         console.log("FORM SENHA: ", senhaVar);
@@ -142,6 +117,6 @@ function entrar() {
         })
 
         return false;
-    }
+}
 
 </script>
